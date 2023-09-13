@@ -13,13 +13,11 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
 
-      - name: Checkout submodules
-        run: git submodule update --init --recursive
-
       - name: Setup
         run: |
           sudo apt update && sudo apt install -y git make
           make setup
+          git submodule update --init --recursive
       
       - name: Check containerd
         run: |
