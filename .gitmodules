@@ -6,3 +6,7 @@
 	path = external/kubernetes
 	url = https://github.com/takuro-sato/kubernetes
 	branch = conftest_deterministic
+[submodule "external/containerd"]
+	path = external/containerd
+	url = https://github.com/takuro-sato/containerd
+	branch = extract_policy
