@@ -1,0 +1,8 @@
+[submodule "gen-policy/lib/kata-containers"]
+	path = gen-policy/lib/kata-containers
+	url = https://github.com/takuro-sato/kata-containers.git
+	branch = additional_exec_command
+[submodule "external/kubernetes"]
+	path = external/kubernetes
+	url = https://github.com/takuro-sato/kubernetes
+	branch = conftest_deterministic

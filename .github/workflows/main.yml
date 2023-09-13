@@ -1,0 +1,23 @@
+name: Test
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  install-containerd:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Setup
+        run: |
+          sudo apt update && sudo apt install -y git make
+          make setup
+      
+      - name: Check containerd
+        run: |
+          containerd --version
